@@ -6,7 +6,7 @@
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--primary-bg);
   text-align: center;
@@ -15,6 +15,10 @@
   text-shadow: 0 2px 10px rgba(26, 26, 46, 0.1);
   position: relative;
   padding-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .section-title::after {
@@ -31,13 +35,17 @@
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--primary-bg);
   text-align: center;
   max-width: 600px;
   margin: 0 auto 60px;
   opacity: 0.8;
   font-weight: 500;
+  line-height: 1.6;
+  padding: 0 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* About Section */

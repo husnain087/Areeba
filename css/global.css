@@ -18,6 +18,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background-color: #c9514e;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 code {
