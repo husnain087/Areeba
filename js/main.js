@@ -102,10 +102,10 @@ function handleFormSubmit(event) {
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Portfolio website loaded');
-  
+
   // Set initial active nav link
   updateActiveNavLink();
-  
+
   // Handle nav link clicks
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
@@ -116,5 +116,52 @@ document.addEventListener('DOMContentLoaded', function() {
       setActiveNav(this);
     });
   });
+
+  // Initialize portfolio carousel
+  initializePortfolioCarousel();
 });
+
+// Initialize portfolio carousel with manual controls
+function initializePortfolioCarousel() {
+  const carousel = document.getElementById('portfolioCarousel');
+  if (!carousel) return;
+
+  // Initialize Bootstrap carousel
+  const bsCarousel = new bootstrap.Carousel(carousel, {
+    interval: 3000, // Auto-slide every 3 seconds
+    ride: 'carousel', // Enable auto-sliding
+    wrap: true, // Loop back to first slide after last
+    keyboard: true, // Allow keyboard navigation
+    pause: 'hover' // Pause on hover
+  });
+
+  // Ensure carousel controls work
+  const prevBtn = carousel.querySelector('.carousel-control-prev');
+  const nextBtn = carousel.querySelector('.carousel-control-next');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      bsCarousel.prev();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      bsCarousel.next();
+    });
+  }
+
+  // Ensure indicator buttons work
+  const indicators = carousel.querySelectorAll('.carousel-indicators button');
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', function(e) {
+      e.preventDefault();
+      bsCarousel.to(index);
+    });
+  });
+
+  console.log('Portfolio carousel initialized');
+}
 
