@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-client",
+  "version": "1.0.0",
+  "description": "Portfolio website client - HTML, CSS, JavaScript with Bootstrap",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -o",
+    "start": "npx http-server . -p 3000 -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
