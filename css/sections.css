@@ -453,6 +453,15 @@
   text-align: center;
 }
 
+.testimonial-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-bg);
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0.9;
+}
+
 /* Contact Section */
 .contact-section {
   background: var(--section-bg-2);
